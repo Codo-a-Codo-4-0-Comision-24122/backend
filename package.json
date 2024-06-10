@@ -4,7 +4,7 @@
   "description": "Proyecto de backend",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js",
+    "start": "node --watch app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,5 +19,12 @@
   "bugs": {
     "url": "https://github.com/Codo-a-Codo-4-0-Comision-24122/backend/issues"
   },
-  "homepage": "https://github.com/Codo-a-Codo-4-0-Comision-24122/backend#readme"
+  "homepage": "https://github.com/Codo-a-Codo-4-0-Comision-24122/backend#readme",
+  "dependencies": {
+    "express": "^4.19.2",
+    "mysql2": "^3.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.3"
+  }
 }
