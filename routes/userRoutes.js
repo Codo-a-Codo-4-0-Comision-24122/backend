@@ -1,10 +1,8 @@
 const express = require('express');
 const router = express.Router();
+const userController = require('../controller/userController')
 
 // Obtiene informacion de UN usuario..
-router.get("/:id", (req, res) => {
-    const id = req.params.id;
-    response.send("respuesta de informacion de usuario con ID especificado WIP...");
-});
+router.get("/:id", userController.getUser);
 
 module.exports = router;
