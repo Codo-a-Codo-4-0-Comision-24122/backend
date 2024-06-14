@@ -11,7 +11,7 @@ const getUser = (req, res) => {
 
 const createUser = (req, res) => {
 
-    const {username, email, gender, age, maidenName,lastName,avatarURL}= req.body;
+    const {username, email, gender, age, maidenName,lastName,avatarURL}= req.params;
 
     const sql = 'INSERT INTO `practica001`.`users` (`username`, `email`, `gender`, `age`, `maidenName`, `lastName`, `avatarURL`) VALUES (?, ?, ?, ?, ?, ?, ?);'
     db.query(sql,[username, email, gender, age, maidenName,lastName,avatarURL] ,(err, result) => {
@@ -20,4 +20,12 @@ const createUser = (req, res) => {
     });
 }
 
-module.exports = { getUser, createUser };
+const updateUser = (req, res) => {
+
+};
+
+const deleteUser = (req, res) => {
+
+}
+
+module.exports = { getUser, createUser, updateUser, deleteUser };
