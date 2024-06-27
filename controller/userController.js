@@ -32,9 +32,9 @@ const updateUser = (req, res) => {
     const {username, email, gender, age, maidenName,lastName,avatarURL}= dataRequest ;
 
     // si no tengo todos los paramatros arrojar error... o no hacer nada..
-
+    //UPDATE `practica001`.`users` SET `username` = 'Alejandro' WHERE (`idUser` = '10');
     // decidir como lo vamos a hacer si todos o de a uno... 
-    const sql = 'UPDATE `practica001`.`users` .... WHERE idUser=' + id;
+    const sql = 'UPDATE `practica001`.`users` SET `username` = ?, `email` = ?, `gender` = ?, `age` =?, `maidenName` = ?,`lastName` = ?,`avatarURL` = ? WHERE idUser=' + id;
     db.query(sql,[username, email, gender, age, maidenName,lastName,avatarURL] ,(err, result) => {
         if (err) throw err;
         res.send(result);        
