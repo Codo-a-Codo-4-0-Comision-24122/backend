@@ -1,5 +1,15 @@
 const db = require('../db/db');
 
+const profileUser = (req, res) => {
+    const id = req.params.userId;// userId viene desde authMiddleware si y solo si el token es valido...
+    // decidimos que actividades autorizadas se puede realizar...
+    if(!id) {
+        res.status(403).send("Acceso denegado, requiere autoneticacion..");
+    }
+
+    res.status(200).send("Acceso permitido...");
+}
+
 const getUser = (req, res) => {
     const id = req.params.id; // OJO con este parametro...
     const sql = 'SELECT * FROM users WHERE idUser=' + id;
@@ -60,4 +70,4 @@ const deleteUser = (req, res) => {
     });
 }
 
-module.exports = { getUser, createUser, updateUser, deleteUser };
+module.exports = { getUser, createUser, updateUser, deleteUser, profileUser };

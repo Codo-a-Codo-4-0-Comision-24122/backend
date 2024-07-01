@@ -7,7 +7,7 @@ const config = require('../config/config');
 
 const register =  (request, response) => {
 
-    const { username, password } = req.body;
+    const { username, password } = request.body;
     // a partir de aca oculto la contraseña...
     const passwordHashed = bcrypt.hashSync(password, 'estoesunsalt');
 

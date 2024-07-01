@@ -16,7 +16,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"username\": \"ale\",\r\n    \"email\": \"ale@mail.com\",\r\n    \"gender\": \"masculino\",\r\n    \"age\": 22,\r\n    \"maidenName\": \"Alejandro\",\r\n    \"lastName\": \"Apellido\",\r\n    \"avatarURL\": \".../url\"\r\n}",
+							"raw": "{\r\n    \"username\": \"ale\",\r\n    \"email\": \"ale@mail.com\",\r\n    \"gender\": \"masculino\",\r\n    \"age\": 22,\r\n    \"maidenName\": \"Alejandro\",\r\n    \"lastName\": \"Apellido\",\r\n    \"avatarURL\": \"./url2\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -64,7 +64,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:3000/user/3",
+							"raw": "http://localhost:3000/user/10",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -72,7 +72,7 @@
 							"port": "3000",
 							"path": [
 								"user",
-								"3"
+								"10"
 							]
 						}
 					},
@@ -85,7 +85,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"username\":\"ale\",\r\n    \"email\": \"ale@mail.com\",\r\n    \"gender\": \"masculino\",\r\n    \"age\": 22,\r\n    \"maidenName\": \"Alejandro\",\r\n    \"lastName\": \"Apellido\",\r\n    \"avatarURL\": \".../url\"\r\n}",
+							"raw": "{\r\n    \"username\":\"Alejandro\",\r\n    \"email\": \"ale@mail.com\",\r\n    \"gender\": \"masculino\",\r\n    \"age\": 22,\r\n    \"maidenName\": \"Alejandro\",\r\n    \"lastName\": \"Apellido\",\r\n    \"avatarURL\": \".../url\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -93,7 +93,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:3000/user/3",
+							"raw": "http://localhost:3000/user/10",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -101,7 +101,7 @@
 							"port": "3000",
 							"path": [
 								"user",
-								"3"
+								"10"
 							]
 						}
 					},
@@ -122,6 +122,35 @@
 							"path": [
 								"user",
 								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/upload",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "fileName",
+									"type": "file",
+									"src": []
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/upload",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"upload"
 							]
 						}
 					},
