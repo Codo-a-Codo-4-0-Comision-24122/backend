@@ -9,13 +9,13 @@ const register =  (request, response) => {
 
     const { username, password } = request.body;
     // a partir de aca oculto la contraseña...
-    const passwordHashed = bcrypt.hashSync(password, 'estoesunsalt');
+    const passwordHashed = bcrypt.hashSync(password, 8);
 
     const userRegistration = { id: users.length + 1, username, password: passwordHashed };
     users.push(userRegistration);
 
     // generamos un token con identificaion unica...
-    const token = jwt.sign( { id: userRegistration.id }, config.secretKey, { expiresIn: config.expiresIn}  );
+    const token = jwt.sign( { id: userRegistration.id }, config.secretKey, { expiresIn: config.tokenExpiresIn}  );
 
     response.status(200).send( { auth:true, token});
 };
